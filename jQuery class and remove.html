@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Class Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="myParagraph">This is a paragraph.</p>
+
+  <script>
+    $(document).ready(function() {
+      // Adding and removing classes in jQuery
+      $("#myParagraph").addClass("highlight");
+
+      // After 3 seconds, remove the 'highlight' class
+      setTimeout(function() {
+        $("#myParagraph").removeClass("highlight");
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>

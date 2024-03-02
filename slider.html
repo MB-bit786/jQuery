@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Slider Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    #slider {
+      width: 80%;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="slider"></div>
+
+  <script>
+    $(document).ready(function(){
+      // Create a slider with animation
+      $("#slider").slider({
+        min: 0,
+        max: 100,
+        value: 50,
+        slide: function(event, ui) {
+          // Do something with the slider value
+          console.log(ui.value);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
